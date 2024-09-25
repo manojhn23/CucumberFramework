@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Module</td>
+              <td>1</td>
+            <td>13 Aug 2024, 19:36</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">com.automation.steps.CartSteps.verify_the_is_present_on_cart(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="278669000">278ms</td>
+              <td class="duration" data-value="278669000">278ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.CartSteps.verify_user_is_on_cart_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="1280108300">1s 280ms</td>
+              <td class="duration" data-value="1280108300">1s 280ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.click_on_search_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="2657394500">2s 657ms</td>
+              <td class="duration" data-value="2657394500">2s 657ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.clicksOnItemIfItShowsList()</td>
+              <td>1</td>
+              <td class="duration" data-value="5583455500">5s 583ms</td>
+              <td class="duration" data-value="5583455500">5s 583ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.user_clicks_on_search_icon_and_enters_the_item(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1151128200">1s 151ms</td>
+              <td class="duration" data-value="1151128200">1s 151ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.user_clicks_on_search_icon_and_selects_the_shirts()</td>
+              <td>1</td>
+              <td class="duration" data-value="4801910900">4s 801ms</td>
+              <td class="duration" data-value="4801910900">4s 801ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.user_opens_the_website()</td>
+              <td>2</td>
+              <td class="duration" data-value="10008128300">10s 008ms</td>
+              <td class="duration" data-value="5004064150">5s 004ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HomeSteps.verify_user_is_on_homepage()</td>
+              <td>2</td>
+              <td class="duration" data-value="279420400">279ms</td>
+              <td class="duration" data-value="139710200">139ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.Hooks.closeUp(io.cucumber.java.Scenario)</td>
+              <td>2</td>
+              <td class="duration" data-value="1335316500">1s 335ms</td>
+              <td class="duration" data-value="667658250">667ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.Hooks.setUp(io.cucumber.java.Scenario)</td>
+              <td>2</td>
+              <td class="duration" data-value="8323373900">8s 323ms</td>
+              <td class="duration" data-value="4161686950">4s 161ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ProductListSteps.user_is_clicks_on_first_product()</td>
+              <td>1</td>
+              <td class="duration" data-value="4723686700">4s 723ms</td>
+              <td class="duration" data-value="4723686700">4s 723ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ProductListSteps.verify_user_is_on_the_product_list_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="86830200">086ms</td>
+              <td class="duration" data-value="86830200">086ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ProductSteps.clicks_on_add_to_cart_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="153492100">153ms</td>
+              <td class="duration" data-value="153492100">153ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ProductSteps.user_clicks_on_add_to_cart_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="127498400">127ms</td>
+              <td class="duration" data-value="127498400">127ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ProductSteps.user_clicks_on_cart_icon()</td>
+              <td>1</td>
+              <td class="duration" data-value="1462507000">1s 462ms</td>
+              <td class="duration" data-value="1462507000">1s 462ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ProductSteps.user_selects_the_color_of(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3354159600">3s 354ms</td>
+              <td class="duration" data-value="3354159600">3s 354ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ProductSteps.user_selects_the_size_of(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="149626200">149ms</td>
+              <td class="duration" data-value="149626200">149ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ProductSteps.verify_cart_icon_zero_items()</td>
+              <td>1</td>
+              <td class="duration" data-value="122009000">122ms</td>
+              <td class="duration" data-value="122009000">122ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ProductSteps.verify_user_can_get_message_of_added()</td>
+              <td>1</td>
+              <td class="duration" data-value="758056800">758ms</td>
+              <td class="duration" data-value="758056800">758ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ProductSteps.verify_user_is_on_the_product_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="89808300">089ms</td>
+              <td class="duration" data-value="89808300">089ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.ProductSteps.verify_user_is_on_the_product_page_of(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="62971400">062ms</td>
+              <td class="duration" data-value="62971400">062ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>21</td>
+            <td>25</td>
+            <td class="duration">46s 789ms</td>
+            <td class="duration">1s 871ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
